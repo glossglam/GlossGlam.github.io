@@ -1,0 +1,277 @@
+<!doctype html>
+<html lang="en">
+  <head>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title> GLOSSGLAM </title>
+  </head>
+  <body>
+
+      <style>
+        body {
+
+      font-family: cursive; /* Fuente cursiva */
+      background-color: #D8C3E2;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center; /* Centra el contenido horizontalmente */
+      align-items: center; /* Centra el contenido verticalmente */
+      height: 190vh; /* altura */
+    }
+    .container {
+      width: 500px; /* Ancho del contenedor */
+      padding: 20px;
+      background-color: lightblue;;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center; /* alineacion del texto */
+    }
+    .product-list {
+      list-style-type: none;
+      padding: 0;
+    }
+    .product-item {
+      display: flex;
+      justify-content: space-between;
+      padding: 10px 0;
+      border-bottom: 1px solid #ddd;
+    }
+    .total, .checkout-btn {
+      margin-top: 20px;
+      text-align: center;
+    }
+    .checkout-btn button {
+      padding: 10px 20px;
+      background-color: #4CAF50;
+      color: white; /* Color del texto */
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    .checkout-btn button:hover {
+      background-color: #45a049;
+    }
+    .input-group {
+      margin-top: 15px;
+    }
+    .input-group label {
+      display: block;
+      margin-bottom: 5px;
+    }
+    .input-group input, .input-group select {
+      width: 100%;
+      padding: 8px;
+      border-radius: 4px;
+      border: 1px solid #ddd;
+    }
+    </style>
+
+
+<!--baner-->
+
+</div >
+
+<div class="fixed-top">
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+  <div class="container-fluid">
+            <a class="nav-link disabled" aria-disabled="true">Gloss-Glam</a>
+      <br>
+    <a class="navbar-brand" href="cesta.html">cesta</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
+      <div class="navbar-nav">
+        <a class="nav-link active" aria-current="page" href="sena.html"> inicio </a>
+        <a class="nav-link active" href="inicio.html">seccion de inicio</a>
+        <a class="nav-link" href="productos.html">productos</a>
+      <br>
+        <form class="d-flex" role="search">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="buscar">
+          <button class="btn btn-outline-success" type="submit">Buscar</button>
+        </form>
+      
+      </div>
+    </div>
+  </div>
+</nav>
+</div>
+</div>
+
+<br>
+<br>
+<br> 
+
+  <style>
+body {
+  
+
+  font-size: 2em; /* Tamaño del encabezado, ajusta si es necesario */
+  margin-top: 50px; /* Ajusta el margen superior si es necesario */
+}
+</style>
+
+
+<!__pago__>
+
+<br>
+<br>
+
+<div class="container">
+  <h1>Finaliza tu compra</h1>
+  <h2>Cesta de Compras</h2>
+  <ul class="product-list">
+    <li class="product-item">
+      <span>Producto 1</span>
+      <span>$10.00</span>
+    </li>
+    <li class="product-item">
+      <span>Producto 2</span>
+      <span>$15.00</span>
+    </li>
+    <li class="product-item">
+      <span>Producto 3</span>
+      <span>$20.00</span>
+    </li>
+  </ul>
+
+  <div class="total">
+    <strong>Total: $45.00</strong>
+  </div>
+
+  <div class="input-group">
+    <label for="name">Nombre completo:</label>
+    <input type="text" id="name" placeholder="Tu nombre">
+  </div>
+
+  <div class="input-group">
+    <label for="address">Dirección, coloca torre, piso y apartamento si es necesario :</label>
+    <input type="text" id="address" placeholder="Tu dirección">
+  </div>
+
+  <div class="input-group">
+    <label for="payment">Método de pago:</label>
+    <select id="payment">
+      <option value="credit-card">Tarjeta de Crédito</option>
+      <option value="paypal">PayPal</option>
+      <option value="transfer">Transferencia Bancaria</option>
+    </select>
+  </div>
+
+  <div class="input-group">
+    <label for="card-number">Número de tarjeta:</label>
+    <input type="text" id="card-number" required>
+  </div>  
+
+  <div class="input-group">
+    <label for="cvv">CVV:</label>
+    <input type="text" id="cvv" required>
+  </div>  
+
+  <div class="checkout-btn">
+    <button onclick="processOrder()">Realizar Pedido</button>
+  </div>
+</div>
+
+<script>
+  function processOrder() {
+    const name = document.getElementById('name').value;
+    const address = document.getElementById('address').value;
+    const payment = document.getElementById('payment').value;
+
+    if (!name || !address || !payment) {
+      alert("Por favor, completa todos los campos.");
+      return;
+    }
+
+    alert(`Pedido realizado con éxito:\n\nNombre: ${name}\nDirección: ${address}\nMétodo de Pago: ${payment}`);
+  }
+</script>
+
+
+
+<!__final__> 
+
+  
+<style>
+        .container {
+            padding: 20px;
+            text-align: center;
+        }
+        .contact {
+            margin-top: 20px;
+        }
+        .contact p {
+            margin: 5px 0;
+        }
+        footer {
+            margin-top: 50px;
+            text-align: center;
+            font-size: 14px;
+            color: #555;
+        }
+        footer a {
+            color: #007bff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        
+     
+<h2>Gloss-Glam</h2>
+        
+  
+<p>Los mejores productos para tu belleza</p>
+
+        
+
+<div class="contact">
+            
+     
+<h4>Contacta aquí</h4>
+            
+            
+
+      
+<p>Email: <a href="mailto:glossglam05@gmail.com">glossglam05@gmail.com</a></p>
+            
+            
+
+      
+<p>Instagram: <a href="https://instagram.com/glossglam_05" target="_blank">@glossglam_05</a></p>
+        
+        
+</div>
+    
+</div>
+
+ 
+</div>
+
+
+
+</div>
+</div></div>
+</div></div>
+</div></div>
+</div>
+
+
+
+
+
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+
+</body>
+</html> 
